@@ -28,8 +28,20 @@ class MainSite extends React.Component {
                     <h1>MyReads</h1>
                 </div>
                 <div className="list-books-content">
-                    <Shelf />
+                    <Shelf 
+                        name="Currently Reading" 
+                        books={this.state.books.filter(book => book.shelf ==="currentlyReading")}
+                    />
+                    <Shelf 
+                        name="Want To Read" 
+                        books={this.state.books.filter(book => book.shelf ==="wantToRead")}
+                    />
+                    <Shelf 
+                        name="Read" 
+                        books={this.state.books.filter(book => book.shelf ==="read")}
+                    />
                 </div>
+                
                 <div className="open-search">
                     <Link to="/search">Add a book</Link>
                 </div>
