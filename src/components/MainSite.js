@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Shelf from './Shelf'
+import * as BooksAPI from '../BooksAPI'
 
 class MainSite extends React.Component {
     render() {
