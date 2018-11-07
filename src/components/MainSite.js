@@ -4,6 +4,23 @@ import Shelf from './Shelf'
 import * as BooksAPI from '../BooksAPI'
 
 class MainSite extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            books: []
+        }
+
+    }
+
+    componentDidMount() {
+        BooksAPI.getAll()
+        .then(response => {
+            console.log(response)
+            this.setState({books: response})
+        })
+            
+    }
+
     render() {
         return (
             <div className="list-books">
