@@ -85,3 +85,8 @@ class SearchSite extends React.Component {
 }
 
 export default SearchSite
+
+/**
+ * Inspired by Ryan Waite's webinar 
+ * ( https://www.youtube.com/watch?v=acJHkd6K5kI&=&feature=youtu.be ) 
+ */
